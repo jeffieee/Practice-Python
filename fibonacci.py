@@ -1,15 +1,11 @@
 def fibonacci(number):
-    array =[0]
-    if(len(array) == 1):
-        array.append(1)
+    array =[0,1]
     
-    while len(array) <= number+1:
-        for num in array:
-            array.append(array[num] + array[num+1])
-    
-    return array
+    while len(array) < number +1:
+        nextFib = array[-1] + array[-2]
+        array.append(nextFib)
+    return array[:number +1]
             
-    
 number = 7
 
 print(fibonacci(number))   

@@ -1,12 +1,10 @@
 def filter_high_sales(sales_data, threshold):
+    result = []
     for i in sales_data:
-        result = []
+        if i["sales"] >= threshold:
+            result.append(i)
         
-        for i in sales_data:
-            if i["sales"] >= threshold:
-                result.append(i)
-        
-        return result
+    return result
         
 sales_data = [
     {'month': 'January', 'sales': 2500},
